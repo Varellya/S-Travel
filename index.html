@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <title>San'ka Travel</title>
+</head>
+
+<body> <!--class="no-scroll"-->
+    <!------------------------------------ HEADER ------------------------------------>
+    <header>
+        <img src="assets/logo2_grey10.png" alt="" class="header_logo">
+
+        <div class="header_contacts">
+            <div class="block_icons">
+                <a href="https://www.instagram.com/sankatravel" target="_blank">
+                    <img src="assets/header_Instagram.png" alt="">
+                </a>
+
+                <a href="https://www.youtube.com/@sanka_travel" target="_blank">
+                    <img src="assets/header_YouTube.png" alt="">
+                </a>
+
+                <a href="https://www.facebook.com/SankaTraveI" target="_blank">
+                    <img src="assets/header_Facebook.png" alt="">
+                </a>
+
+                <a href="tg://resolve?domain=sanka_t" target="_blank">
+                    <img src="assets/header_Telegram.png" alt="">
+                </a>
+            </div>
+
+            <div class="phone_number">+380 (99) 123 45 67</div>
+        </div>
+    </header>
+
+
+    <!------------------------------------ INTRO ------------------------------------>
+    <div class="section_intro">
+        <div class="main_video_background">
+            <video autoplay loop muted class="video">
+                <source src="assets/Hero Desktop 1920x1080.mp4" type="video/mp4">
+                Ваш браузер не поддерживает HTML5 видео.
+            </video>
+        </div>
+
+        <div class="section_intro_content">
+            <img src="assets/logo1_white.png" alt="" class="main_logo">
+
+            <div class="intro_info">
+                <div class="intro_text">
+                    <h1>Побач більше</h1>
+                    <p>Ми не підкорювачі вершин, ми лише гості в царстві гір.</p>
+                </div>
+
+                <button class="btn_intro_form">Хочу в гори!</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------------ MODAL WINDOW ------------------------------------>
+    <div class="modal">
+        <div class="modal_window">
+            <span class="btn_close_form">
+                <img src="assets/close.png" alt="">
+            </span>
+
+            <p class="modal_appeal">Залиште свої контакти, і ми зв’яжемося з вами.</p>
+
+            <form class="modal_form" action="send_email.php" method="post">
+                <div class="form_item_name">
+                    <label for="name">Ім'я</label>
+                    <input type="text" id="name" name="name">
+                </div>
+
+                <p>Телефон або email</p>
+
+                <div class="form_item_callback">
+                    <div class="form_item_number">
+                        <label for="number">
+                            <img src="assets/form_phone.png" alt="">
+                        </label>
+
+                        <input type="tel" id="number" name="telephone">
+                    </div>
+
+                    <div class="form_item_email">
+                        <label for="email">
+                            <img src="assets/form_email.png" alt="">
+                        </label>
+
+                        <input type="email" id="email" name="email">
+                    </div>
+                </div>
+
+                <fieldset class="change_messenger">
+                    <legend>Бажаний засіб спілкування:</legend>
+                    
+                    <input type="radio" id="messege_phone" name="messenger" value="phone"/>
+                    <label for="messege_phone" class="messenger_labels">
+                        <img src="assets/form_phone_grey70.png" alt="">
+                        <img src="assets/form_phone_grey90.png" alt="">
+                    </label>
+
+                    <input type="radio" id="messege_email" name="messenger" value="email"/>
+                    <label for="messege_email" class="messenger_labels">
+                        <img src="assets/form_email_grey70.png" alt="">
+                        <img src="assets/form_email_grey90.png" alt="">
+                    </label>
+
+                    <input type="radio" id="messege_tg" name="messenger" value="telegram"/>
+                    <label for="messege_tg" class="messenger_labels">
+                        <img src="assets/form_tg_grey70.png" alt="">
+                        <img src="assets/form_tg_grey90.png" alt="">
+                    </label>
+
+                    <input type="radio" id="messege_viber" name="messenger" value="viber"/>
+                    <label for="messege_viber" class="messenger_labels">
+                        <img src="assets/form_viber_grey70.png" alt="">
+                        <img src="assets/form_viber_grey90.png" alt="">
+                    </label>
+                </fieldset>
+
+                <div class="form_item_theme">
+                    <label for="theme">Тема</label>
+                    <input type="text" id="theme" name="theme">
+                </div>
+
+                <div class="form_item_message">
+                    <label for="message">Повідомлення</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+
+                <div class="block_btn">
+                    <button class="btn_cancel" type="button">Скасувати</button>
+                    <button class="btn_send" type="submit">Надіслати</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="section_lowLine"></div>
+
+
+    <!------------------------------------ OFFERS ------------------------------------>
+    <div class="section_offers  container">
+        <div class="section_head">
+            <span></span>
+            <h2 class="section_title">Ми пропонуємо:</h2>
+            <span></span>
+        </div>
+
+        <div class="offers_blocks">
+            <div class="offer_card" onclick="handleClick(event)">
+                <img src="assets/offer_1.jpg" alt="" class="offer_background">
+
+                <div class="offer_info">
+                    <div class="offer_header">
+                        <div class="offer_heads_ico">
+                            <img src="assets/event_grey80.png" alt="">
+                            <img src="assets/offer_event2_grey90.png" alt="">
+                        </div>
+
+                        <h3 class="offer_title">Події</h3>
+
+                        <span class="offer_card_close" onclick="handleOfferClose(event)">
+                            <img src="assets/offer_close_ico.png" class="offer_card_close_ico" alt="">
+                        </span>
+                    </div>
+
+                    <span></span>
+
+                    <div class="offer_list">
+                        <div class="offer_item">
+                            <div class="offer_item_title">
+                                <div class="item_box_ico">
+                                    <img src="assets/offer_ico_1.png" alt="">
+                                </div>
+
+                                <p class="offer_item_title_text">Подорожі з палатками</p>
+                            </div>
+
+                            <p class="offer_item_text">Бери палатку і рюкзак та занурюйся у пригоди простонеба! Немає палатки? Знайдемо, де взяти в аренду!</p>
+                        </div>
+
+                        <div class="offer_item">
+                            <div class="offer_item_title">
+                                <div class="item_box_ico">
+                                    <img src="assets/offer_ico_2.png" alt="">
+                                </div>
+
+                                <p class="offer_item_title_text">Подорожі з ночівлею у будиночку</p>
+                            </div>
+
+                            <p class="offer_item_text">Любиш гори, але надаєш перевагу ночівлі в комфорті? Все просто — вдень подорожуєш, вночі вертаєшся до душа і ліжечка.</p>
+                        </div>
+
+                        <div class="offer_item">
+                            <div class="offer_item_title">
+                                <div class="item_box_ico">
+                                    <img src="assets/offer_ico_3.png" alt="">
+                                </div>
+
+                                <p class="offer_item_title_text">Екскурсійні подорожі</p>
+                            </div>
+
+                            <p class="offer_item_text"> Подивись на історичні та культурні пам’ятки із зупинкою в готелі.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offer_card" onclick="handleClick(event)">
+                <img src="assets/offer_2.jpg" alt="" class="offer_background">
+
+                <div class="offer_info">
+                    <div class="offer_header">
+                        <div class="offer_heads_ico">
+                            <img src="assets/place_grey80.png" alt="">
+                            <img src="assets/offer_place2_grey90.png" alt="">
+                        </div>
+
+                        <h3 class="offer_title">Місця</h3>
+
+                        <span class="offer_card_close" onclick="handleOfferClose(event)">
+                            <img src="assets/offer_close_ico.png" class="offer_card_close_ico" alt="">
+                        </span>
+                    </div>
+
+                    <span></span>
+
+                    <div class="offer_list">
+                        <div class="offer_item">
+                            <div class="offer_item_title">
+                                <div class="item_box_ico">
+                                    <img src="assets/offer_ico_4.png" alt="">
+                                </div>
+
+                                <p class="offer_item_title_text">Україною</p>
+                            </div>
+
+                            <p class="offer_item_text">Подорожі по рідній землі — що може бути краще?</p>
+                        </div>
+
+                        <div class="offer_item">
+                            <div class="offer_item_title">
+                                <div class="item_box_ico">
+                                    <img src="assets/offer_ico_5.png" alt="">
+                                </div>
+
+                                <p class="offer_item_title_text">Карпатами</p>
+                            </div>
+
+                            <p class="offer_item_text">Так, ми подорожуємо всією країною, наше серденько назавжди підкорили Карпати!</p>
+                        </div>
+
+                        <div class="offer_item">
+                            <div class="offer_item_title">
+                                <div class="item_box_ico">
+                                    <img src="assets/offer_ico_6.png" alt="">
+                                </div>
+
+                                <p class="offer_item_title_text">За кордон</p>
+                            </div>
+
+                            <p class="offer_item_text">Наразі, через повномасштабне вторгнення росії, ми не проводимо подорожі за кордон. 
+                                Задонать на ЗСУ, щоб наблизити перемогу!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offer_card" onclick="handleClick(event)">
+                <img src="assets/offer_3.jpg" alt="" class="offer_background">
+
+                <div class="offer_info">
+                    <div class="offer_header">
+                        <div class="offer_heads_ico">
+                            <img src="assets/time_grey80.png" alt="">
+                            <img src="assets/offer_time2_grey90.png" alt="">
+                        </div>
+
+                        <h3 class="offer_title">Час</h3>
+
+                        <span class="offer_card_close" onclick="handleOfferClose(event)">
+                            <img src="assets/offer_close_ico.png" class="offer_card_close_ico" alt="">
+                        </span>
+                    </div>
+
+                    <span></span>
+
+                    <div class="offer_list">
+                        <div class="offer_item">
+                            <div class="offer_item_title">
+                                <div class="item_box_ico">
+                                    <img src="assets/offer_ico_7.png" alt="">
+                                </div>
+
+                                <p class="offer_item_title_text">Тривалі подорожі</p>
+                            </div>
+
+                            <p class="offer_item_text">Зазвичай наші подорожі тривають від одного до двох тижнів, в залежності від локації та формату.</p>
+                        </div>
+
+                        <div class="offer_item">
+                            <div class="offer_item_title">
+                                <div class="item_box_ico">
+                                    <img src="assets/offer_ico_8.png" alt="">
+                                </div>
+
+                                <p class="offer_item_title_text">Подорожі вихідного дня</p>
+                            </div>
+
+                            <p class="offer_item_text">З сучасним темпом життя зовсім немає часу?
+                                Нумо, друже! Хочаб вихідні можна приділити на відпочинок!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offer_card" onclick="handleClick(event)">
+                <img src="assets/offer_4.jpg" alt="" class="offer_background">
+
+                <div class="offer_info">
+                    <div class="offer_header">
+                        <div class="offer_heads_ico">
+                            <img src="assets/format_grey80.png" alt="">
+                            <img src="assets/offer_format2_grey90.png" alt="">
+                        </div>
+
+                        <h3 class="offer_title">Формат</h3>
+
+                        <span class="offer_card_close" onclick="handleOfferClose(event)">
+                            <img src="assets/offer_close_ico.png" class="offer_card_close_ico" alt="">
+                        </span>
+                    </div>
+
+                    <span></span>
+
+                    <div class="offer_list">
+                        <div class="offer_item">
+                            <div class="offer_item_title">
+                                <div class="item_box_ico">
+                                    <img src="assets/offer_ico_9.png" alt="">
+                                </div>
+
+                                <p class="offer_item_title_text">Піші подорожі</p>
+                            </div>
+
+                            <p class="offer_item_text">Вмієш ходити? То пішли!</p>
+                        </div>
+
+                        <div class="offer_item">
+                            <div class="offer_item_title">
+                                <div class="item_box_ico">
+                                    <img src="assets/offer_ico_10.png" alt="">
+                                </div>
+
+                                <p class="offer_item_title_text">Велоподорожі</p>
+                            </div>
+
+                            <p class="offer_item_text">Вітер у волоссі, вільність руху, приємна втома в ногах. 
+                                Велоподорож — чудовий формат для активного відпочинку.</p>
+                        </div>
+
+                        <div class="offer_item">
+                            <div class="offer_item_title">
+                                <div class="item_box_ico">
+                                    <img src="assets/offer_ico_11.png" alt="">
+                                </div>
+
+                                <p class="offer_item_title_text">Автоподорожі</p>
+                            </div>
+
+                            <p class="offer_item_text">Їдеш швидше — бачиш більше, егеш?
+                                Нема авто? Знайдемо, де взяти в аренду! Не хочеш водити? Знайдемо місця в салоні!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------------ ORDER ------------------------------------>
+    <div class="section_order  container">
+        <div class="section_head">
+            <span></span>
+            <h2 class="section_title">Подорож на замовлення:</h2>
+            <span></span>
+        </div>
+
+        <div class="order_info">
+            <div class="order_info_text">
+                <h4 class="order_title">Немає найближчих подій, чи не знайшли зручну для вас подорож? Замовте у нас свою власну!</h4>
+
+                <p class="order_description">Ми можемо влаштувати поїздку за вашою ідеєю. На ціну впливатиме кількість людей, локація і тривалість. Всі питання ви можете обговорити безпосередньо з гідом, на рахунку якого вже більше 999 вдалих подорожей, 8 років досвіду і 0 нещасних випадків!</p>
+                
+                <div class="order_format">
+                    <h5>San’ka Travel — це ще:</h5>
+
+                    <ul>
+                        <li>корпоративні подорожі</li>
+                        <li>сімейні походи</li>
+                        <li>індивідуальні екскурсії</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="order_photo">
+                <img src="assets/Order.jpg" alt="">
+            </div>
+        </div>
+
+        <button class="btn_order">Замовити</button>
+    </div>
+
+
+    <!------------------------------------ IMPRESSION ------------------------------------>
+    <div class="section_impression container">
+        <div class="section_head">
+            <span></span>
+            <h2 class="section_title">san'ka travel це:</h2>
+            <span></span>
+        </div>
+
+        <div class="impression_blocks">
+            <div class="impression_block_photos">
+                <div class="column_photos">
+                    <div class="impression_photo">
+                        <p class="impression_photo_description  reverse">Вранці літати на повітряних кулях</p>
+                        <img src="assets/Cappadocia.jpg" alt="">
+                    </div>
+
+                    <div class="impression_photo">
+                        <p class="impression_photo_description">Захід сонця зустрічати на березі солоного озера</p>
+                        <img src="assets/Salted lake.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="impression_photo">
+                    <p class="impression_photo_description">Вдень милуватися водоспадами </p>
+                    <img src="assets/Waterfall.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="impression_block_photos  centric">
+                <div class="row_photos  top">
+                    <div class="impression_photo  first">
+                        <p class="impression_photo_description">Відвідати неймовірні курорти</p>
+                        <img src="assets/Skiing.jpg" alt="">
+                    </div>
+
+                    <div class="impression_photo  second">
+                        <p class="impression_photo_description  reverse">Доторкнутися до зимових пейзажів гір</p>
+                        <img src="assets/Winter landscape.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="impression_photo  third">
+                    <p class="impression_photo_description  reverse">Опинитися на краю світу</p>
+                    <img src="assets/Rock.JPG" alt="">
+                </div>
+
+                <div class="row_photos  bottom">
+                    <div class="impression_photo  fourth">
+                        <p class="impression_photo_description  reverse">Побачити подвійне небо в гірських озерах</p>
+                        <img src="assets/Mirror lake.jpg" alt="">
+                    </div>
+
+                    <div class="impression_photo  fifth">
+                        <p class="impression_photo_description">Завести нові знайомства</p>
+                        <img src="assets/Horse.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------------ ABOUT ------------------------------------>
+    <div class="about  container">
+        <div class="section_head">
+            <span></span>
+            <h2 class="section_title">Про нас:</h2>
+            <span></span>
+        </div>
+
+        <div class="about_inner">
+            <div class="about_video">
+                <img src="https://placehold.co/360x640" alt="">
+            </div>
+
+            <div class="about_info">
+                <h3 class="about_info_title">Привіт! Я Олександр, той самий San’ka ;)</h3>
+
+                <div class="about_info_quote">
+                    <span><img src="assets/brackets1.png" alt=""></span>
+
+                    <p>Подорожі — це моя страсть та велике захоплення. Я завжди шукаю нові локації та відкриваю їх для себе і своїх друзів.</p>
+
+                    <span><img src="assets/brackets2.png" alt=""></span>
+                </div>
+
+                <h4 class="info_rules_title">А ось прості правила, які допомагають мені робити наші подорожі такими крутими:</h4>
+                
+                <ol class="about_info_rules">
+                    <li class="rules_item">
+                        <h5 class="rule_title">Максимум вражень!</h5>
+
+                        <p class="rule_text">То є основна наша мета — дарувати емоції.  І вся наша робота визначається цією метою.</p>
+                    </li>
+
+                    <li class="rules_item">
+                        <h5 class="rule_title">Оперативність.</h5>
+
+                        <p class="rule_text">Налагоджені трансфери допомагають побачити більше за короткий період часу. Менше переїздів, більше вражень — все, щоб максимально використати кожну мить!</p>
+                    </li>
+
+                    <li class="rules_item">
+                        <h5 class="rule_title">Гнучкість.</h5>
+
+                        <p class="rule_text">Не завжди погода дає можливість зробити те, що заплановано на сьогодні. Але ми готові до будь-чого — наші графіки гнучкі, і ми знайдемо активності на будь-який випадок.</p>
+                    </li>
+
+                    <li class="rules_item">
+                        <h5 class="rule_title">Чесність.</h5>
+
+                        <p class="rule_text">Ясність. Прозорість. Ми відкрито кажемо вартість і що до неї включено. Ніяких додаткових витрат, якщо тільки ви самі не побажаєте.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------------ HISTORY ------------------------------------>
+    <div class="history  container">
+        <div class="section_head">
+            <span></span>
+            <h2 class="section_title">Наша історія</h2>
+            <span></span>
+        </div>
+
+        <div class="history_info">
+            <div class="history_info_text">
+                <p>Наша історія починається в 2016 році, коли ми вперше організували подорож для наших друзів. Це було наше маленьке хоббі, яке з часом переросло в ідеологію.</p>
+
+                <p>До 2020 року основним напрямком були наші Карпати, а з 2021 року ми розширили горизонти та почали організовувати подорожі в Грузію та Туреччину.</p>
+
+                <p>Зараз, через повномасштабне вторгнення росії, ми подорожуємо лише Карпатами. Але Карпати назавжди вкрали наше серденько, і ми ніколи не втомимося повертатися туди знов і знов!</p>
+            </div>
+            
+            <div class="history_photo">
+                <img src="assets/History.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------------ OUR TEAM ------------------------------------>
+    <div class="our_team  container">
+        <div class="section_head">
+            <span></span>
+            <h2 class="section_title">Наша команда</h2>
+            <span></span>
+        </div>
+
+        <div class="team_inner">
+            <ul class="team_list">
+                <li class="team_item">
+                    <div class="item_avatar">
+                        <img src="assets/Oleksander_photo.jpg" alt="">
+                    </div>
+
+                    <div class="item_name">Олександр</div>
+
+                    <div class="item_position">Гід-організатор</div>
+
+                    <ul class="item_socials_list">
+                        <li class="social_item">
+                            <a href="https://www.instagram.com/sankatravel" target="_blank">
+                                <img src="assets/team_Instagram.png" alt="">
+                            </a>
+                        </li>
+
+                        <li class="social_item">
+                            <a href="https://www.facebook.com/SankaTraveI" target="_blank">
+                                <img src="assets/team_Facebook.png" alt="">
+                            </a>
+                        </li>
+
+                        <li class="social_item">
+                            <a href="tg://resolve?domain=sanka_t" target="_blank">
+                                <img src="assets/team_Telegram.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="team_item">
+                    <div class="item_avatar">
+                        <img src="assets/Julia_photo.jpg" alt="">
+                    </div>
+
+                    <div class="item_name">Юлія</div>
+
+                    <div class="item_position">Контент менеджер</div>
+
+                    <ul class="item_socials_list">
+                        <li class="social_item">
+                            <a href="https://www.instagram.com/_____uliia" target="_blank">
+                                <img src="assets/team_Instagram.png" alt="">
+                            </a>
+                        </li>
+
+                        <li class="social_item">
+                            <a href="https://www.facebook.com/uliia.ostapets" target="_blank">
+                                <img src="assets/team_Facebook.png" alt="">
+                            </a>
+                        </li>
+
+                        <li class="social_item">
+                            <a href="tg://resolve?domain=sanka_t" target="_blank">
+                                <img src="assets/team_Telegram.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="team_text">
+                <p>Ми обожнюємо подорожувати та відкривати нові локації. Буває, що натрапляємо на місця, які не знайти навіть в путівниках. І ми завжди раді поділитися ними з вами, моїми друзями.</p>
+
+                <p>Бо кожен з вас — не просто учасник подорожі, а справжній друг. Адже саме в дружній компанії народжуються найкращі пригоди!</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------------ FEEDBACK ------------------------------------>
+    <div class="feedback  container">
+        <div class="section_head">
+            <span></span>
+            <h2 class="section_title">Відгуки від наших друзів:</h2>
+            <span></span>
+        </div>
+
+        <ul class="feedback_list">
+            <li class="feedback_item">
+                <img class="ava_bg" src="assets/feedback_bg.png" alt="">
+
+                <div class="people_avatar">
+                    <img src="assets/feedback_1.jpg" alt="">
+                </div>
+
+                <div class="people_name">Артем</div>
+
+                <div class="people_position">UI/UX Дизайнер</div>
+
+                <div class="people_quote">
+                    <span><img src="assets/brackets1.png" alt=""></span>
+
+                    <p>Сашко поєднує в собі дві важливі риси — дружнє ставлення і професійний підхід. Ти ніби йдеш в гори зі старим другом, але при цьому точно знаєш, що всі адміністративні питання будуть вирішені на найвищому рівні.</p>
+
+                    <span><img src="assets/brackets2.png" alt=""></span>
+                </div>
+            </li>
+
+            <li class="feedback_item">
+                <img class="ava_bg" src="assets/feedback_bg.png" alt="">
+
+                <div class="people_avatar">
+                    <img src="assets/feedback_2.jpg" alt="">
+                </div>
+
+                <div class="people_name">Оля</div>
+
+                <div class="people_position">Спеціалістка фін. моніторингу</div>
+
+                <div class="people_quote">
+                    <span><img src="assets/brackets1.png" alt=""></span>
+
+                    <p>Подорожую з Санькою з 2016 року. Якщо хочеться комфорту — обираю радіальний похід, з ночівлею в ліжечку та гарячим душем. Коли готові до виклику — беремо рюкзаки з палатками і віддаємося у полон природи. У будь-якому випадку нас чекає неймовірна атмосфера з піснями під гітару, приємна компанія і класні спогади 🌻</p>
+
+                    <span><img src="assets/brackets2.png" alt=""></span>
+                </div>
+            </li>
+
+            <li class="feedback_item">
+                <img class="ava_bg" src="assets/feedback_bg.png" alt="">
+
+                <div class="people_avatar">
+                    <img src="assets/feedback_3.jpg" alt="">
+                </div>
+
+                <div class="people_name">Тетяна</div>
+
+                <div class="people_position">Маркетологиня</div>
+
+                <div class="people_quote">
+                    <span><img src="assets/brackets1.png" alt=""></span>
+
+                    <p>Обожнюю гори, подорожі та ненавиджу їх планувати. Тому їжджу з Сашком кожен рік 😊
+                        Завжди комфортно, доступно, активно та весело. Подорожі та гори перезагружають мозок, наповнюють і дають відчуття справжнього відпочинку.</p>
+
+                    <span><img src="assets/brackets2.png" alt=""></span>
+                </div>
+            </li>
+
+            <li class="feedback_item">
+                <img class="ava_bg" src="assets/feedback_bg.png" alt="">
+
+                <div class="people_avatar">
+                    <img src="assets/feedback_4.jpg" alt="">
+                </div>
+
+                <div class="people_name">Вікторія</div>
+
+                <div class="people_position">Ресурсна аналітикиня</div>
+
+                <div class="people_quote">
+                    <span><img src="assets/brackets1.png" alt=""></span>
+
+                    <p>Неодноразово подорожую з Сашком. Завжди видно, скільки зусиль було вкладено в організацію поїздки. Під час сходження Сашко завжди морально підтримує цікавими та веселими історіями. Та ніколи не забуває про щось смачненьке, щоб підняти глюкозу😁</p>
+
+                    <span><img src="assets/brackets2.png" alt=""></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <!------------------------------------ FOOTER ------------------------------------>
+    <footer>
+        <ul class="social_connect_list">
+            <li class="social_connect_item">
+                <img src="assets/footer_phone.png" alt="">
+                
+                <p>+38099492922</p>
+            </li>
+
+            <li class="social_connect_item">
+                <img src="assets/footer_telegram.png" alt="">
+                
+                <p>t.me/sankatravel</p>
+            </li>
+
+            <li class="social_connect_item">
+                <img src="assets/footer_Instagram.png" alt="">
+                
+                <p>@sankatravel</p>
+            </li>
+
+            <li class="social_connect_item">
+                <img src="assets/footer_Facebook.png" alt="">
+                
+                <p>SankaTraveI</p>
+            </li>
+
+            <li class="social_connect_item">
+                <img src="assets/footer_YouTube.png" alt="">
+                
+                <p>@sanka_travel</p>
+            </li>
+        </ul>
+
+        <div class="designed_by">©designed by artem ovsiienko</div>
+    </footer>
+    
+    <script src="app/app.js"></script>
+</body>
+</html>
+
+
+
+
